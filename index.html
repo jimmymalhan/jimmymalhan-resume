@@ -1,70 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jimmy Malhan's Resume</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-    nav a {
-      margin: 15px;
-      color: white;
-      text-decoration: none;
-      padding: 8px;
-      background-color: #555;
-      border-radius: 4px;
-    }
-    section {
-      padding: 20px;
-      margin: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    ul {
-      list-style-type: circle;
-    }
-    .icon-links a {
-      margin: 10px;
-      color: white;
-      font-size: 24px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Malhan's Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-  <header>
+<header>
     <h1>Jimmy Malhan</h1>
     <p>Engineering Manager at HealthJoy</p>
     <div class="icon-links">
-      <a href="https://www.linkedin.com/in/jimmymalhan/"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/jimmymalhan"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jimmymalhan/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jimmymalhan"><i class="fab fa-github"></i></a>
     </div>
-  </header>
+</header>
 
-  <nav>
+<nav id="nav">
     <a href="#intro">Introduction</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-  </nav>
+</nav>
+
+<div class="content">
+
   <!-- Introduction Section -->
   <section id='intro'>
     <h2>Introduction</h2>
@@ -212,6 +175,7 @@
   <section id='contact'>
     <h2>Contact Information</h2>
     <p>Email: jimmymalhan999@gmail.com</p>
+    <p><a href="https://www.linkedin.com/in/jimmymalhan/" target="_blank">Connect with me on LinkedIn</a></p>
   </section>
 
   <!-- More Stuff Coming Soon -->
@@ -219,5 +183,8 @@
     <h2>More Stuff Coming Soon!</h2>
   </section>
 
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
