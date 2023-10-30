@@ -1,14 +1,3 @@
-
-
-
-## TODO Features
-  - Update README for open issues.
-  - Fix overlapping tabs issue in Education and Contact sections.
-  - Remove visible website, education, etc., tabs when scrolling down.
-
-- Make the website more dynamic using React
-- Add animations for smoother transitions
-- Implement real-time updates for the Skills section
 # Jimmy Malhan's Resume Website
 
 ## How to Run the Project
@@ -26,15 +15,18 @@
 
 For any queries, you can connect with me on [LinkedIn](https://www.linkedin.com/in/jimmymalhan/).
 
-
-
 ## TODO Features
 
-- Add smooth scrolling.
-- Implement a dark/light mode toggle.
-- Add a contact form with validation.
-- Integrate social media sharing options.
-- Implement localization for multiple languages.
+- Add React components to make the website more dynamic.
+- Implement React Router for seamless navigation.
+- Use React Hooks for state management.
+- Update README for open issues.
+- Fix overlapping tabs issue in Education and Contact sections.
+- Remove visible website, education, etc., tabs when scrolling down.
+- Make the website more dynamic using React.
+- Add animations for smoother transitions.
+- Implement real-time updates for the Skills section.
+
 ## Contributing
 
 If you'd like to contribute to this project, here's how you can go about it:
