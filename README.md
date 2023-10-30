@@ -1,4 +1,14 @@
 
+
+
+## TODO Features
+  - Update README for open issues.
+  - Fix overlapping tabs issue in Education and Contact sections.
+  - Remove visible website, education, etc., tabs when scrolling down.
+
+- Make the website more dynamic using React
+- Add animations for smoother transitions
+- Implement real-time updates for the Skills section
 # Jimmy Malhan's Resume Website
 
 ## How to Run the Project
