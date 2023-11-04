@@ -1,0 +1,93 @@
+/* Newsletter.css */
+
+.newsletter-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .subscribe-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Subscription Popup */
+  .subscription-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out, scaleIn 0.5s ease-in-out;
+    display: none; /* Hide initially */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.7);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .subscription-popup.active {
+    display: block; /* Show when active */
+  }
+  
+  .subscription-popup h2 {
+    margin-top: 0;
+  }
+  
+  .subscription-popup p {
+    margin-bottom: 20px;
+  }
+  
+  .subscription-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscription-popup input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .subscription-popup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add more styles as needed */
+  
