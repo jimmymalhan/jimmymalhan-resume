@@ -5,6 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +37,5 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add your custom styles here */
