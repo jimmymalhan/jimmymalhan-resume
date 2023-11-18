@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import './Countdown.css';
 
-function Countdown({ endDate }) {
-  // Define a useCallback for calculateTimeLeft to prevent unnecessary re-renders
+function Countdown({ endDate, onCountdownEnd }) {
   const calculateTimeLeft = useCallback(() => {
     const difference = new Date(endDate) - new Date();
     let timeLeft = {};
@@ -11,13 +9,15 @@ function Countdown({ endDate }) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+    } else {
+      onCountdownEnd(); // Call the callback function when the countdown ends
     }
 
     return timeLeft;
-  }, [endDate]);
+  }, [endDate, onCountdownEnd]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -27,30 +27,15 @@ function Countdown({ endDate }) {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [calculateTimeLeft]);
+  }, [timeLeft, calculateTimeLeft]);
 
   const { days, hours, minutes, seconds } = timeLeft;
 
   return (
-    <div className="countdown-container">
-      <h2>Countdown Timer</h2>
-      <div className="countdown">
-        <div className="countdown-item">
-          <span>{days}</span>
-          <span>Days</span>
-        </div>
-        <div className="countdown-item">
-          <span>{hours}</span>
-          <span>Hours</span>
-        </div>
-        <div className="countdown-item">
-          <span>{minutes}</span>
-          <span>Minutes</span>
-        </div>
-        <div className="countdown-item">
-          <span>{seconds}</span>
-          <span>Seconds</span>
-        </div>
+    <div>
+      <h1>Countdown Timer</h1>
+      <div>
+        {days} days {hours} hours {minutes} minutes {seconds} seconds
       </div>
     </div>
   );
