@@ -1,32 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NewsletterModal from './NewsletterModal';
-import About from './About';
-import Consultancy from './Consultancy';
-import Newsletter from './Newsletter';
+import React, { useEffect, useMemo } from 'react';
+import './App.css';
+
+import Countdown from './Countdown';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  
-    useEffect(() => {
-      const hasVisited = localStorage.getItem('hasVisited');
-      if (!hasVisited) {
-        setShowModal(true);
-        localStorage.setItem('hasVisited', 'true');
-      }
-    }, []);
+  // Calculate the date 30 days from now
+  const thirtyDaysFromNow = useMemo(() => {
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 30);
+    return endDate;
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Handle timer logic here, e.g., display a modal
+    }, thirtyDaysFromNow - Date.now());
+
+    return () => clearTimeout(timer);
+  }, [thirtyDaysFromNow]);
+
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-            <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/consultancy" element={<Consultancy />} />
-          <Route path="/newsletter" element={<Newsletter />} />
-        </Routes>
-            <NewsletterModal onClose={() => setShowModal(false)} isVisible={showModal} />
-      </div>
-    </Router>
+    <div className="App">
+      {/* Display the Countdown component */}
+      <Countdown endDate={thirtyDaysFromNow} />
+    </div>
   );
 }
 
